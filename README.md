@@ -1,6 +1,6 @@
 # Road Pothole & Anomaly Detection System
 
-An AI-driven computer vision tool that automatically detects and classifies road distress conditions using an optimized YOLO ONNX machine learning model (`best.onnx`). It accepts either a local computer file address or a public web URL link of an image, highlighting any anomalies it discovers.
+An AI-driven computer vision tool that automatically detects and classifies road distress conditions using an optimized YOLO ONNX machine learning model. It accepts either a local computer file address or a public web URL link of an image, highlighting any anomalies it discovers.
 
 ## 📋 Road Anomaly Identification Guide
 
