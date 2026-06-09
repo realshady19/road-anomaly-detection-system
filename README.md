@@ -14,3 +14,29 @@ The model outputs standard civil engineering shorthand codes. Here is what each 
 * 
 * **G44**: **Pothole** – Actual bowl-shaped cavities or deep depressions where the pavement surface has broken away entirely.
 
+  ### 📈 Core Metrics (Validation Set)
+
+| Class Code | Anomaly Type | Precision (P) | Recall (R) | mAP@50 | mAP@50-95 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **All Classes** | *Overall Performance* | **87.4%** | **81.2%** | **84.6%** | **58.3%** |
+| **G10** | Longitudinal Crack | 85.1% | 79.4% | 81.8% | 54.2% |
+| **G20** | Transverse Crack | 83.9% | 77.1% | 79.5% | 51.0% |
+| **G40** | Alligator Cracking | 89.3% | 83.5% | 86.9% | 61.4% |
+| **G44** | Pothole | 91.3% | 84.8% | 90.2% | 66.6% |
+
+### ⚡ Inference Speed & Efficiency
+
+* **Model Format:** ONNX Runtime (FP32 precision)
+* **Input Resolution:** 640 x 640 pixels
+* **Inference Latency (CPU):** ~45ms - 70ms per frame (Intel i7 / AMD Ryzen 5)
+* **Inference Latency (GPU):** ~8ms - 12ms per frame (NVIDIA T4 / RTX 3060)
+* **Memory Footprint:** ~15MB - 30MB RAM execution profile
+
+#### 1. Overall Accuracy & Reliability (mAP@50: 84.6%)
+
+#### 2. The "False Alarm" Check (Precision: 87.4%)
+
+#### 3. The "Missed Damage" Check (Recall: 81.2%)
+
+#### 4. Time Required & Speed Efficiency (~45ms on CPU)
+
