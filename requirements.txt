@@ -1,0 +1,21 @@
+# ====================================================================
+# ROAD ANOMALY DETECTOR - TERMINAL INSTALLATION GUIDE FOR BEGINNERS
+# ====================================================================
+# 
+# Follow these exact commands in your terminal or command prompt:
+#
+# STEP 1: Open your terminal and navigate to your downloaded folder:
+# cd road-anomaly-detector
+#
+# STEP 2: Install all the required packages by running this command:
+# pip install -r requirements.txt
+#
+# STEP 3: Run the detection script to find potholes and cracks:
+# python detect.py
+#
+# ====================================================================
+# REQUIRED PACKAGES (Python will auto-install these via Step 2 above):
+
+ultralytics>=8.0.0
+opencv-python>=4.7.0
+numpy>=1.22.0
