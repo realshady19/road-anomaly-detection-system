@@ -7,11 +7,8 @@ An AI-driven computer vision tool that automatically detects and classifies road
 The model outputs standard civil engineering shorthand codes. Here is what each identifier means:
 
 * **D00**: **Longitudinal Crack** – Cracks running roughly parallel to the road’s centerline. Often caused by poor joint construction or temperature cycles.
-* 
 * **D10**: **Transverse Crack** – Cracks running perpendicular to the road’s centerline. Usually caused by thermal shrinkage or structural movement.
-* 
 * **D20**: **Alligator Cracking (Fatigue Cracking)** – Interconnected cracks forming a pattern resembling alligator skin. Signifies major structural base failure under heavy traffic loads.
-* 
 * **D40**: **Pothole** – Actual bowl-shaped cavities or deep depressions where the pavement surface has broken away entirely.
 
   ### 📈 Core Metrics (Validation Set)
