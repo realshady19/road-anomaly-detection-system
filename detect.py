@@ -10,6 +10,10 @@ ANOMALY_MAPPING = {
     "g20": "Transverse Crack (Crack running perpendicular to the road centerline)",
     "g40": "Alligator Cracking (Advanced web-like structural fatigue cracks)",
     "g44": "Pothole (Deep structural cavity or bowl-shaped road depression)",
+    "d00": "Longitudinal Crack (Crack running parallel to the road centerline)",
+    "d10": "Transverse Crack (Crack running perpendicular to the road centerline)",
+    "d20": "Alligator Cracking (Advanced web-like structural fatigue cracks)",
+    "d40": "Pothole (Deep structural cavity or bowl-shaped road depression)",
 }
 
 def load_image(path_or_url):
@@ -34,7 +38,7 @@ def load_image(path_or_url):
             raise ValueError("File found, but OpenCV could not read it as a valid image format.")
         return img
 
-def run_pothole_detection(image_input, model_path="best.onnx"):
+def run_pothole_detection(image_input, model_path="model.onnx"):
     # 1. Ensure model exists
     if not os.path.exists(model_path):
         raise FileNotFoundError(f"Model file missing! Make sure '{model_path}' is in the same folder.")
@@ -78,6 +82,9 @@ def run_pothole_detection(image_input, model_path="best.onnx"):
         output_filename = "detected_anomaly.jpg"
         results.save(filename=output_filename)
         print(f"\nVisual results with drawn boxes saved as: '{output_filename}'")
+        
+        # Display the image to the user
+        results.show()
         
     print("======================================\n")
 

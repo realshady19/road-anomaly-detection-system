@@ -6,23 +6,23 @@ An AI-driven computer vision tool that automatically detects and classifies road
 
 The model outputs standard civil engineering shorthand codes. Here is what each identifier means:
 
-* **G10**: **Longitudinal Crack** – Cracks running roughly parallel to the road’s centerline. Often caused by poor joint construction or temperature cycles.
+* **D00**: **Longitudinal Crack** – Cracks running roughly parallel to the road’s centerline. Often caused by poor joint construction or temperature cycles.
 * 
-* **G20**: **Transverse Crack** – Cracks running perpendicular to the road’s centerline. Usually caused by thermal shrinkage or structural movement.
+* **D10**: **Transverse Crack** – Cracks running perpendicular to the road’s centerline. Usually caused by thermal shrinkage or structural movement.
 * 
-* **G40**: **Alligator Cracking (Fatigue Cracking)** – Interconnected cracks forming a pattern resembling alligator skin. Signifies major structural base failure under heavy traffic loads.
+* **D20**: **Alligator Cracking (Fatigue Cracking)** – Interconnected cracks forming a pattern resembling alligator skin. Signifies major structural base failure under heavy traffic loads.
 * 
-* **G44**: **Pothole** – Actual bowl-shaped cavities or deep depressions where the pavement surface has broken away entirely.
+* **D40**: **Pothole** – Actual bowl-shaped cavities or deep depressions where the pavement surface has broken away entirely.
 
   ### 📈 Core Metrics (Validation Set)
 
 | Class Code | Anomaly Type | Precision (P) | Recall (R) | mAP@50 | mAP@50-95 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **All Classes** | *Overall Performance* | **87.4%** | **81.2%** | **84.6%** | **58.3%** |
-| **G10** | Longitudinal Crack | 85.1% | 79.4% | 81.8% | 54.2% |
-| **G20** | Transverse Crack | 83.9% | 77.1% | 79.5% | 51.0% |
-| **G40** | Alligator Cracking | 89.3% | 83.5% | 86.9% | 61.4% |
-| **G44** | Pothole | 91.3% | 84.8% | 90.2% | 66.6% |
+| **D00** | Longitudinal Crack | 85.1% | 79.4% | 81.8% | 54.2% |
+| **D10** | Transverse Crack | 83.9% | 77.1% | 79.5% | 51.0% |
+| **D20** | Alligator Cracking | 89.3% | 83.5% | 86.9% | 61.4% |
+| **D40** | Pothole | 91.3% | 84.8% | 90.2% | 66.6% |
 
 ### ⚡ Inference Speed & Efficiency
 
@@ -40,3 +40,4 @@ The model outputs standard civil engineering shorthand codes. Here is what each 
 
 #### 4. Time Required & Speed Efficiency (~45ms on CPU)
 
+**Overall: Great for basic detection of an anomaly. Preferable for detecting if an anomaly exists or not.**
